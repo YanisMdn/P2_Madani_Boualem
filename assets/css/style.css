@@ -146,12 +146,6 @@ padding: 0 2rem;
     gap: 1rem;
 }
 
-.more:hover{
-    color: #0065fc;
-    transition: 900ms;
-    cursor: pointer;
-}
-
 .flex-filter i {
     color: #0065fc;
     background-color: #deebff;
@@ -163,6 +157,13 @@ padding: 0 2rem;
 .filter-flex li{
     display: inline-flex;
     border: 2px solid blue;
-    padding-right: 0 0 0 10rem;
+    margin-right: 5px;
+    padding-right: 20px;
     border-radius: 1rem;
+}
+
+.more:hover{
+    color: #0065fc;
+    transition: 900ms;
+    cursor: pointer;
 }
