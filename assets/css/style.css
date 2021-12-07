@@ -22,6 +22,12 @@ a {
     text-decoration: none;
 }
 
+/* Header */
+
+header {
+    padding: 0 2rem ;
+}
+
 /* Nav */
 nav {
     display: flex;
@@ -35,7 +41,8 @@ nav a {
 
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     color: #0065fc;
     border-top: 3px solid #0065fc;
 }
@@ -45,9 +52,11 @@ main {
     padding: 0 2rem;
 }
 
-main h1, p {
+main h1,
+p{
     margin-bottom: 1.2rem;
 }
+
 /* Footer */
 
 footer{
@@ -64,7 +73,8 @@ footer li{
     margin-bottom: 15px;
 }
 
-footer a:hover{
+footer a:hover,
+footer a:focus{
     font-weight: 600;
     color: #0065FC;
 }
@@ -72,12 +82,6 @@ footer a:hover{
 /**/
 .flex{
     display: flex;
-}
-
-/*class header*/
-
-.first-title {
-    padding: 0 2rem ;
 }
 
 
@@ -131,7 +135,8 @@ padding: 0 2rem;
     opacity: 0.95;
 }
 
-.searchButton button:hover{
+.searchButton button:hover,
+.searchButton button:focus{
     opacity:1;
 }
 /*Class Main*/
@@ -146,24 +151,98 @@ padding: 0 2rem;
     gap: 1rem;
 }
 
-.flex-filter i {
+.flex-filter li > i {
     color: #0065fc;
     background-color: #deebff;
     padding: 1rem;
     border-radius: 50%;
-    margin: 0 0 0 -2px;
+    margin: -3px;
 }
 
 .filter-flex li{
     display: inline-flex;
-    border: 2px solid blue;
+    align-items: center;
+    border: 2px solid #f2f2f2;
     margin-right: 5px;
     padding-right: 20px;
-    border-radius: 1rem;
+    border-radius: 2rem;
 }
 
-.more:hover{
+.flex-filter a {
+    padding: 0 16px 0 16px;
+}
+
+.flex-filter li:hover,
+.flex-filter li:focus{
+    background-color: #DEEBFF;
+    transform: scale(1.02);
+    transition: all 200ms ease;
+    cursor: pointer;
+}
+
+
+
+/* Hébergements*/
+.logements {
+    display: flex;
+    align-items: center;
+    gap: 16px
+}
+
+.logements i {
+    color: #0065FC;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #f2f2f2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popular{
+    flex-basis: 33%;
+}
+
+.overnight{
+    order: -1;
+    flex-basis: 66%;
+
+}
+
+.hotel{
+    display: flex;
+    gap: 16px;
+
+}
+
+.popular,
+.overnight {
+    border: 1px solid red;
+    padding: 16px;
+    background-color: #f2f2f2;
+    border-radius: 16px;
+}
+
+.overnight figure{
+border : 1px solid blue;
+flex-basis: calc(33%-16px);
+}
+
+.overnight-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-around;
+    margin-bottom: 16px;
+}
+
+.more{
+    font-weight: bold;
+}
+
+.more:hover,
+.more:focus{
     color: #0065fc;
-    transition: 900ms;
     cursor: pointer;
 }
