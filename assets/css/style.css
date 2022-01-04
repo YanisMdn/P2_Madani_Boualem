@@ -235,7 +235,7 @@ padding: 0 2rem;
     background-color: white;
     max-width: 491px ;
     max-height: 398px ;
-    border-radius: 16px  ;
+    border-radius: 16px 16px 0 0 ;
 }
 
 .chambre img {
@@ -279,12 +279,4 @@ padding: 0 2rem;
 
 
 
-/* étoiles */
 
-.etoile-bleu {
-    color: #0065fc;
-}
-
-.etoile-grise {
-    color: #f2f2f2;
-}
