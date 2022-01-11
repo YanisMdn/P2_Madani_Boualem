@@ -7,14 +7,9 @@
     font-family: "Raleway", "sans-serif";
 }
 
-body {
-    margin: 0;
-}
 
 ul{
     list-style-type: none;
-    padding: 0;
-    margin: 0;
 }
 
 a {
@@ -22,10 +17,14 @@ a {
     text-decoration: none;
 }
 
+img{
+    object-fit: cover;
+}
+
 /* Header */
 
 header {
-    padding: 0 2rem ;
+    padding-left: 32px ;
 }
 
 
@@ -39,7 +38,7 @@ nav {
 }
 
 nav a {
-    padding: 2rem ;
+    padding: 32px ;
 
 }
 
@@ -51,7 +50,7 @@ nav a:focus {
 
 /*main*/
 main {
-    padding: 0 2rem;
+    padding: 0 32px;
 }
 
 main h1,
@@ -71,7 +70,7 @@ footer section{
     justify-content: space-evenly;
 }
 
-footer li{
+footer li {
     margin-bottom: 15px;
 }
 
@@ -80,12 +79,6 @@ footer a:focus{
     font-weight: 600;
     color: #0065FC;
 }
-
-/*Hébergement*/
-
-
-
-
 
 /**/
 .align{
@@ -144,33 +137,32 @@ padding: 0 2rem;
 .bouton-rechercher button:focus{
     opacity:1;
 }
-/*Class Main*/
 
-/*Class Filters*/
+/*Class Filtres*/
 
 
 
 .alignement-titre-filtre {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 16px;
 }
 
-.filtres li > i {
+.filtres i {
     color: #0065fc;
     background-color: #deebff;
-    padding: 1rem;
+    padding: 16px;
     border-radius: 50%;
     margin: -3px;
 }
 
-.filtres li{
+.filtres li {
     display: inline-flex;
     align-items: center;
     border: 2px solid #f2f2f2;
     margin-right: 5px;
     padding-right: 20px;
-    border-radius: 2rem;
+    border-radius: 32px;
 }
 
 .filtres a {
@@ -185,71 +177,80 @@ padding: 0 2rem;
     cursor: pointer;
 }
 
-
-
-/* Hébergements*/
-.logements {
-    display: flex;
-    align-items: center;
-    gap: 16px
-}
-
-.logements i {
-    color: #0065FC;
-    width: 32px;
-    height: 32px;
-    border: 2px solid #f2f2f2;
+.fa-info{
+    border: solid 2px #f2f2f2;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10px;
 }
 
-.populaire{
-    flex-basis: 33%;
+
+
+/* Hébergements + populaire */
+
+.conteneur{
+    display: flex;
+    justify-content:space-between;
 }
 
 .chambre{
     order: -1;
-    flex-basis: 66%;
-
+    flex-basis: 63%;
 }
 
-.populaire-chambre{
-    display: flex;
-    gap: 81px;
-
+.populaire{
+    flex-basis: 30%;
 }
 
-
-.populaire,
-.chambre {
-    padding: 16px;
-    background-color: #f2f2f2;
-    border-radius: 16px;
-
-}
-
-
-.chambre figure{
-    background-color: white;
-    max-width: 491px ;
-    max-height: 398px ;
-    border-radius: 16px 16px 0 0 ;
-}
-
-.chambre img {
-    max-width: 470px;
-    max-height: 230px;
-    border-radius: 16px 16px 0 0 ;
-}
-
-
-.liste_chambre{
+.liste-chambre{
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 16px;
+    justify-content: space-between;
+}
+
+.liste-chambre figure{
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    min-width: 25%;
+}
+
+.liste-chambre img{
+    min-width: 100%;
+    height: 110px;
+    border-radius: 20px 20px 0 0;
+}
+
+
+
+.liste-populaire {
+    display: flex;
+    flex-flow: column wrap-reverse ;
+    
+}
+
+.liste-populaire figure{
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    min-width: 100%;
+}
+
+.liste-populaire img{
+    min-width: 250px;
+    height: 140px;
+    border-radius: 20px 0 0 20px;
+}
+
+.liste-populaire figcaption{
+    padding-left: 16px;
+}
+
+.chambre,
+.populaire{
+    padding: 16px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
 }
 
 .plus{
@@ -262,20 +263,6 @@ padding: 0 2rem;
     cursor: pointer;
 }
 
-.populaire figure{
-    background-color: white;
-    display: flex;
-    flex-flow: column;
-    max-width: 491px ;
-    max-height: 398px ;
-    border-radius: 16px ;
-}
-
-.populaire img {
-    max-width: 255px;
-    max-height: 270px;
-    border-radius: 16px 0 0 16px ;
-}
 
 /* étoiles */
 .bleu{
@@ -285,5 +272,59 @@ padding: 0 2rem;
 .gris{
     color: #d9d9d9;
 }
+
+
+/* Activités */
+
+.activites-marseille{
+    padding: 5% 0 0 2%;
+}
+
+.liste-activites{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -45px;
+}
+
+.liste-activites img{
+    border-radius: 20px 20px 0 0;
+}
+
+.liste-activites figure{
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px #f2f2f2;
+}
+
+.liste-activites figcaption{
+    padding: 16px
+}
+
+.alignement-vertical{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.alignement-vertical img{
+    min-width: 100%;
+    height: 200px;
+}
+
+.premier-ratio{
+    display: flex;
+    flex-flow: column wrap;
+    width: 300px;
+}
+
+.premier-ratio img{
+    flex-basis: 86%;
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+
+
+
 
 
