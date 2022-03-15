@@ -315,6 +315,10 @@ max-height: 16px;
 }
 
 @media (max-width: 991px) {
+
+    .bouton-rechercher button{
+        border-radius: 16px 16px 16px 16px;
+    }
     
     .logo{
         display: flex;
