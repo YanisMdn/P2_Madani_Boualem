@@ -22,7 +22,7 @@ img{
 
 body,
 nav figure{
-    margin-top: 0;
+    margin: 0;
 }
 
 /* Header */
@@ -325,7 +325,6 @@ flex-basis: 35%;
 @media (max-width: 991px) {
 
     nav a {
-        padding-left: none;
         border-bottom: 3px solid #d9d9d9;
     }
 
@@ -354,7 +353,7 @@ flex-basis: 35%;
 
     .align-nav{
         padding-top: 20px;
-        justify-content: space-evenly;
+        justify-content: center;
         gap:none;
         margin-right: none;
     }
@@ -373,6 +372,7 @@ flex-basis: 35%;
 
     .chambre{
         order:1;
+        background-color: white;
     }
 
     .liste-chambre,
@@ -430,7 +430,6 @@ flex-basis: 35%;
 
     .chambre{
         padding: 16px;
-        background-color: white;
         border-radius: 20px;
     }
 }
