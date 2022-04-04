@@ -21,10 +21,6 @@ img{
     object-fit: cover;
 }
 
-body,
-nav figure{
-    margin: 0;
-}
 
 /* Header */
 
@@ -35,24 +31,28 @@ header {
 
 
 /* Nav */
-nav {
+nav,
+.align-nav
+{
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+
+}
+
+nav a {
+    padding: 32px;
 }
 
 nav a:hover,
 nav a:focus {
     color: #0065fc;
     border-top: 3px solid #0065fc;
-    padding-top: 23px;
+    padding-top: 37px;
 }
 
 .align-nav {
-    display: flex;
-    gap: 16px;
-    margin-right: 16px;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
 }
 
 /*main*/
@@ -118,17 +118,17 @@ height: 70px;
 
 .bouton-rechercher input::placeholder{
     font-weight: bold;
-    font-size: 1.2rem;
-    padding: 1rem;
+    font-size: 19.2px;
+    padding: 16px;
 }
 
 .bouton-rechercher button{
     background-color: #0065fc;
     color: #ffffff;
-    font-size: 1.2rem;
+    font-size: 19.2px;
     font-weight: bold;
-    border-radius: 0 1rem 1rem 0;
-    padding: 0 1rem;
+    border-radius: 0 16px 16px 0;
+    padding: 0 16px;
     border: 0;
     cursor: pointer;
     opacity: 0.95;
@@ -291,43 +291,81 @@ flex-basis: 35%;
 
 .liste-activites{
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin-left: -45px;
+    padding: 0;
 }
-.colonne{
+
+.contenu-activite-1,
+.contenu-activite-2{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    height: auto;
+    padding: 0;
 }
 
-.liste-activites img{
-    border-radius: 20px 20px 0 0;
+.contenu-activite-1-1,
+.contenu-activite-1-2,
+.contenu-activite-2-1,
+.contenu-activite-2-2{
+min-width: 200px;
+}
+
+.contenu-activite img{
     width: 100%;
-    height: 85%;
-    height: 700px;
+    height: 800px;
 }
 
-.liste-activites figure{
+.contenu-activite-1-1 img{
+    width: 100%;
+    height: 400px;
+}
+
+.contenu-activite-1-2 img{
+    width: 100%;
+    height: 270px;
+}
+
+.contenu-activite-2-1 img{
+    width: 100%;
+    height: 230px;
+}
+
+.contenu-activite-2-2 img{
+    width: 100%;
+    height: 440px;
+}
+
+.contenu-activite img,
+.contenu-activite-1-1 img,
+.contenu-activite-1-2 img,
+.contenu-activite-2-1 img,
+.contenu-activite-2-2 img {
+    border-radius: 25px 25px 0 0;
+    padding: 7.5px;
+}
+
+.contenu-activite,
+.contenu-activite-1-1,
+.contenu-activite-1-2,
+.contenu-activite-2-1,
+.contenu-activite-2-2 {
     background-color: white;
     border-radius: 20px;
-    padding: 5px;
     width: 20%;
     box-shadow: 2px 2px 2px 2px #d9d9d9;
+    text-align: center;
 }
 
-.activite-sd img{
-    max-height: 30%;
-}
-
-.activite-xl img{
-    max-height: 100%;
-}
-
-.activite60 img{
-    max-height: 60%;
-}
-
-.liste-activites figcaption{
-    padding: 16px;
+.contenu-activite figcaption,
+.contenu-activite-1-1 figcaption,
+.contenu-activite-1-2 figcaption,
+.contenu-activite-2-1 figcaption,
+.contenu-activite-2-2 figcaption {
+    padding: 10px;
 }
 
 
@@ -337,22 +375,19 @@ flex-basis: 35%;
 
 @media (max-width: 991px) {
 
-    
-    nav a {
-        border-bottom: 3px solid #d9d9d9;
-    }
-
     nav a:hover,
     nav a:focus {
-        color: #0065fc;
         border-top: none;
-        border-bottom: 3px solid #0065fc;
-}
+    }
+
 
     .bouton-rechercher{
         justify-content: center;
     }
 
+    .search{
+        width: 485px;
+    }
 
 
     .bouton-rechercher button{
@@ -371,11 +406,24 @@ flex-basis: 35%;
     }
 
     .align-nav{
-        padding-top: 20px;
-        justify-content: center;
-        gap:none;
-        margin-right: none;
+        flex-basis: 100%;
+        padding: 0;
     }
+
+    .align-nav li{
+            flex-basis: 50%;
+            border-bottom: 3px solid #f2f2f2;
+            padding-bottom: 5px;
+            text-align: center;
+
+    }
+
+    .align-nav li:hover,
+    .align-nav li:focus {
+        color: #0065fc;
+        border-top: none;
+        border-bottom: 3px solid #0065fc;
+}
 
     .icone-rechercher{
         display: block;
@@ -408,6 +456,11 @@ flex-basis: 35%;
         flex-flow: column wrap;
     }
 
+    .contenu-activite-1,
+    .contenu-activite-2{
+    margin: -10px;
+}
+
     .liste-chambre figure,
     .liste-activites figure {
         display: flex;
@@ -419,7 +472,12 @@ flex-basis: 35%;
     }
     
     .liste-chambre img,
-    .liste-activites img{
+    .contenu-activite img,
+    .contenu-activite-1-1 img,
+    .contenu-activite-1-2 img,
+    .contenu-activite-2-1 img,
+    .contenu-activite-2-2 img
+    {
         width: 100%;
         height: 100px;
         background-size: 100% 100%;
