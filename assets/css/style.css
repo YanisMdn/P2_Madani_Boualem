@@ -7,6 +7,9 @@
     font-family: "Raleway", "sans-serif";
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 ul{
     list-style-type: none;
@@ -35,7 +38,6 @@ nav,
 .align-nav
 {
     display: flex;
-
 }
 
 nav a {
@@ -53,6 +55,8 @@ nav a:focus {
     justify-content: center;
     align-items: center;
     height: 50px;
+    scroll-behavior: smooth;
+
 }
 
 /*main*/
@@ -122,6 +126,10 @@ height: 70px;
     padding: 16px;
 }
 
+.search{
+    width: 300px;
+}
+
 .bouton-rechercher button{
     background-color: #0065fc;
     color: #ffffff;
@@ -149,6 +157,10 @@ height: 70px;
     gap: 16px;
 }
 
+.filtres {
+justify-content: space-around;
+}
+
 .filtres i {
     color: #0065fc;
     background-color: #deebff;
@@ -161,9 +173,10 @@ height: 70px;
     display: inline-flex;
     align-items: center;
     border: 2px solid #f2f2f2;
-    margin-right: 5px;
+    margin: 5px;
     padding-right: 20px;
     border-radius: 32px;
+
 }
 
 .filtres a {
@@ -237,6 +250,7 @@ flex-basis: 35%;
 }
 
 .espace{
+    display: flex;
     justify-content: space-between;
 }
 
