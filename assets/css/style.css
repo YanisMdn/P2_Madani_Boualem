@@ -203,7 +203,13 @@ justify-content: space-around;
 
 .conteneur{
     display: flex;
-    justify-content: space-between
+    justify-content: space-evenly;
+
+}
+
+.conteneur h2,
+.plus {
+    margin-left: 1vw;
 }
 
 .chambre{
@@ -212,36 +218,58 @@ justify-content: space-around;
 }
 
 .populaire{
-flex-basis: 35%;
+    flex-basis: 30%;
 }
 
-.liste-chambre{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
+.populaire,
+.chambre{
+    background-color: #f2f2f2;
+    border-radius: 20px;
 }
 
+.liste-populaire figure,
 .liste-chambre figure{
     background-color: white;
     border-radius: 20px;
-    padding: 5px;
-    width: 24%;
-    min-height: 250px;
-    box-shadow: 2px 2px 2px 2px #d9d9d9;
+    padding: 10px;
+    margin: 10px;
 }
 
-.liste-chambre img{
+.liste-chambre,
+.liste-populaire{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.liste-chambre figure {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+}
+
+
+
+.liste-chambre img {
+    border-radius: 20px 20px 0 0 ;
     width: 100%;
-    height: 40%;
-    border-radius: 20px 20px 0 0;
+
 }
-
-
 
 .liste-populaire {
-    display: flex;
     flex-flow: column wrap-reverse ;
     
+}
+
+.liste-populaire figure {
+    display: flex;
+}
+
+.liste-populaire img {
+    border-radius: 20px 0 0 20px;
+    width: 15vw;
+    height: 100%;
+    padding-right: 10px;
 }
 
 .fa-chart-line {
@@ -253,33 +281,6 @@ flex-basis: 35%;
     display: flex;
     justify-content: space-between;
 }
-
-.liste-populaire figure{
-    display: flex;
-    background-color: white;
-    border-radius: 20px;
-    padding: 10px;
-    width: 100%;
-    max-height: 200px;
-}
-
-.liste-populaire img{
-    width: 90%;
-    height: 100%;
-    border-radius: 20px 0 0 20px;
-}
-
-.liste-populaire figcaption{
-    max-width: 155px;
-}
-
-.chambre,
-.populaire{
-    padding: 16px;
-    background-color: #f2f2f2;
-    border-radius: 20px;
-}
-
 .plus{
     font-weight: bold;
 }
@@ -381,6 +382,8 @@ min-width: 200px;
 .contenu-activite-2-2 figcaption {
     padding: 10px;
 }
+
+
 
 
 .icone-rechercher{
@@ -513,8 +516,8 @@ min-width: 200px;
 }
 
 @media (max-width: 767px) {
-        
-        .align{
+
+    .align{
             display: flex;
             flex-direction: column;
         }
