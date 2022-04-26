@@ -336,19 +336,13 @@ justify-content: space-around;
     padding: 10px;
 }
 
-.contenu-activite-1,
-.contenu-activite-2{
+.contenu-activite-1{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 0;
     padding: 0;
 }
-
-.contenu-activite-2{
-    align-items: flex-end;
-}
-
 
 .liste-activites img {
     width: 20vw;
@@ -501,8 +495,7 @@ justify-content: space-around;
         margin-left: 0;
     }
     
-    .contenu-activite-1,
-    .contenu-activite-2{
+    .contenu-activite-1{
         width: 100%;
     }
 
